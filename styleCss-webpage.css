@@ -15,6 +15,10 @@ body {
     max-width: 100%;
 }
 
+.green { 
+    color: green;
+}
+
 nav { 
     height: 80px;
     display: flex;
@@ -85,12 +89,9 @@ button:active {
     color: green;
 }
 
-.green { 
-    color: green;
-}
-
 .logo { 
     width: 160px;
+    padding: 0;
 }
 
 .nav__container {
@@ -198,7 +199,7 @@ LANDING
 }
 
 header {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 180px);
 }
 
 .header__container {
@@ -218,8 +219,15 @@ header {
 }
 
 .header__img--wrapper {
-    padding: 20px;
+    padding: 0;
     z-index: 2;
+}
+
+.header__img {
+    width: 100%;
+    height: 100%;
+    max-height: 1000px;
+    padding: 0;
 }
 
 .container {
@@ -332,13 +340,15 @@ FEATURES
 
 .book { 
     width: 25%;
-    padding: 24px;
+    padding: 16px;
 }
 
 .book__img {
-    max-height: 380px;
+    max-height: 420px;
     transition: all 300ms ease;
     cursor: no-drop;
+    padding-left: 0;
+    padding-bottom: 0;
 }
 
 .book__img--wrapper {
@@ -399,6 +409,7 @@ footer {
 
 .footer__logo--img {
     width: 160px;
+    padding: 0;
     filter: grayscale(1) invert(1);
 }
 
@@ -412,6 +423,82 @@ footer {
 .footer__links {
  margin: 20px 0 24px 0;
 }
+
+/* 
+**
+
+BOOKS PAGE
+
+**
+*/
+
+#books__body {
+  background-color: rgba(115, 66, 214, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#books__main {
+  flex: 1;
+}
+
+.books__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.books__header--title {
+  margin-bottom: 0;
+}
+
+select {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.books__loading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #7342d6;
+}
+
+.books__loading--spinner {
+  display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+  display: block !important;
+}
+
+.fa-spinner {
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* SMALL PHONES, TABLETS, LARGE SMART PHONES */
 
